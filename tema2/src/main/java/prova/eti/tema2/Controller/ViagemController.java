@@ -13,35 +13,34 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
-import prova.eti.tema2.Model.Destino;
-import prova.eti.tema2.Service.DestinoService;
-
+import prova.eti.tema2.Model.Viagem;
+import prova.eti.tema2.Service.ViagemService;
 
 @RestController
-@RequiredArgsConstructor
 @CrossOrigin("*")
+@RequiredArgsConstructor
 @RequestMapping("api/")
-public class DestinoController {
-     
-    private final DestinoService destinoService;
+public class ViagemController {
+    
+    private ViagemService viagemService;
 
     @PostMapping
-    public Destino CriarDestino(@RequestBody Destino destino){
-        return destinoService.Criar(destino);
+    public Viagem CriarViagem(@RequestBody Viagem viagem){
+        return viagemService.Criar(viagem);
     }
 
     @GetMapping
-    public List<Destino> ListarDestino(){
-        return destinoService.listar();
+    public List<Viagem> ListarViagem(){
+        return viagemService.Listar();
     }
 
     @PutMapping
-    public Destino AtualizarDestino(@PathVariable Long id, @RequestBody Destino destino){
-        return destinoService.Atualizar(destino);
+    public Viagem AtualizarViagem(@PathVariable Long id, @RequestBody Viagem viagem){
+        return viagemService.Atualizar(viagem);
     }
 
     @DeleteMapping("api/{id}")
-    public void DeletarDestino(@PathVariable Long id){
-        destinoService.Deletar(id);
+    public void DeletarViagem(@PathVariable Long id){
+        viagemService.Deletar(id);
     }
 }

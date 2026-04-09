@@ -14,23 +14,21 @@ public class DestinoService {
     
     private final DestinoRepo destinoRepo;
 
-    public Destino salvar(Destino destino){
-        return destinoRepo.save();
-    }
-
-    // Lista apenas um destino
-    public Destino Consultar(Long id){
-        return destinoRepo.findById(id);
+    public Destino Criar(Destino destino){
+        return destinoRepo.save(destino);
     }
 
     // lista todos pelo Id
-    public List<Destino> listar(Long id){
-        return destinoRepo.findAll(id);
+    public List<Destino> listar(){
+        return destinoRepo.findAll();
     }
 
-    // deleta pelo id
-    public Destino Deletar(Long id){
-        return destinoRepo.DeletById(id);
+    public Destino Atualizar(Destino destino){
+        return destinoRepo.save(destino);
+    }
+
+    public void Deletar(Long id){
+        destinoRepo.DeletById(id);
     }
 
 }

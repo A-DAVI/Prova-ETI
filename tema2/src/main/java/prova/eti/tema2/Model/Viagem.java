@@ -1,12 +1,13 @@
 package prova.eti.tema2.Model;
 
 import java.sql.Date;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,6 +28,7 @@ public class Viagem {
     private Date DataChegada;
     private Double valor;
 
-    @ManyToOne
-    private Destino destino;
+    @OneToMany
+    private List<Destino> destino;
+
 }

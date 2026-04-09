@@ -15,19 +15,19 @@ public class ViagemService {
     private final ViagemRepo viagemRepo;
 
     public Viagem Criar(Viagem viagem){
-        return viagemRepo.save();
-    }
-
-    public Viagem Consultar(Long id){
-        return viagemRepo.findById(id);
+        return viagemRepo.save(viagem);
     }
     
-    public List<Long> Listar(Long id){
+    public List<Viagem> Listar(){
         return viagemRepo.findAll();
     }
 
-    public Viagem Deletar(){
-        return viagemRepo.DeletebyId();
+    public Viagem Atualizar(Viagem viagem){
+        return viagemRepo.save(viagem);
+    }
+
+    public Viagem Deletar(Long id){
+        return viagemRepo.DeletebyId(id);
     }
 
 }

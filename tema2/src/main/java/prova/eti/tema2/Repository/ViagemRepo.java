@@ -6,12 +6,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ViagemRepo extends JpaRepository<Long, Viagem> {
+public interface ViagemRepo extends JpaRepository<Viagem, Long> {
 
-    Viagem save();
+    Viagem save(Viagem viagem);
 
-    Viagem findById(Long id);
-
-    Viagem DeletebyId();
+    Viagem DeletebyId(Long id);
 
 }

@@ -1,12 +1,14 @@
 package prova.eti.tema2.Model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,7 +27,8 @@ public class Destino {
 
     private String nome;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name="viagem_id")
+    @JsonIgnore
     private Viagem viagem;
 }
