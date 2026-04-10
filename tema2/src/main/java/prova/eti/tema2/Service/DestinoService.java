@@ -28,7 +28,7 @@ public class DestinoService {
     }
 
     public void Deletar(Long id){
-        destinoRepo.DeletById(id);
+        destinoRepo.deleteById(id);
     }
 
 }

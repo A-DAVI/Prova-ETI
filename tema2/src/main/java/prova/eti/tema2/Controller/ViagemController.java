@@ -19,7 +19,7 @@ import prova.eti.tema2.Service.ViagemService;
 @RestController
 @CrossOrigin("*")
 @RequiredArgsConstructor
-@RequestMapping("api/")
+@RequestMapping("/")
 public class ViagemController {
     
     private ViagemService viagemService;

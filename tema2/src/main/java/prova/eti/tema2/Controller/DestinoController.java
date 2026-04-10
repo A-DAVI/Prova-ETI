@@ -20,7 +20,7 @@ import prova.eti.tema2.Service.DestinoService;
 @RestController
 @RequiredArgsConstructor
 @CrossOrigin("*")
-@RequestMapping("api/")
+@RequestMapping("/")
 public class DestinoController {
      
     private final DestinoService destinoService;

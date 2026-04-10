@@ -26,8 +26,8 @@ public class ViagemService {
         return viagemRepo.save(viagem);
     }
 
-    public Viagem Deletar(Long id){
-        return viagemRepo.DeletebyId(id);
+    public void Deletar(Long id){
+        viagemRepo.deleteById(id);
     }
 
 }

@@ -8,8 +8,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface DestinoRepo extends JpaRepository<Destino, Long>{
 
-    Destino save(Destino destino);
-
-    void DeletById(Long id);
-
 }
